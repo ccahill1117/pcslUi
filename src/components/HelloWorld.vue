@@ -3,6 +3,7 @@
     <v-layout
       text-center
       wrap
+      dark
     >
       <v-flex xs12>
         <v-img

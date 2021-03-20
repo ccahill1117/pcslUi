@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
+    <h2>ok {{apiUrl}}</h2>
   </div>
 </template>
 
@@ -10,6 +11,11 @@
 
 export default {
   name: 'home',
+  data: function () {
+    return {
+      apiUrl: process.env.VUE_APP_ROOT_API
+    }
+  },
   components: {
   }
 }

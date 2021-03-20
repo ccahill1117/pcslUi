@@ -2,7 +2,6 @@
   <v-app>
     <v-app-bar
       app
-      color="white"
       dark
     >
       <div class="d-flex align-center">
@@ -12,11 +11,19 @@
           contain
           src="http://portlandsquash.org/graphics/logo_racquet_shadow.png"
           transition="scale-transition"
-          width="40"
+          width="25%"
         />
+        <v-spacer></v-spacer>
+        <div class="d-flex align-center">
+          <h2>hi</h2>
+        </div>
+        <v-spacer></v-spacer>
+        <div class="d-flex align-center">
+          <h2>hi</h2>
+        </div>
       </div>
       <v-spacer></v-spacer>
-      <span class="mr-2">Latest Release</span>
+      <span class="mr-2">something else</span>
       <v-icon>mdi-open-in-new</v-icon>
     </v-app-bar>
     <v-content>
