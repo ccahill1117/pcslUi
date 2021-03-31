@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <h2>ok {{apiUrl}}</h2>
+    <h2>environment variable test {{apiUrl}}</h2>
   </div>
 </template>
 
