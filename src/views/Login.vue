@@ -28,6 +28,7 @@ export default {
   name: 'Login',
 
   data: () => ({
+    apiUrl: process.env.VUE_APP_ROOT_API,
     input: {
       username: "",
       password: ""

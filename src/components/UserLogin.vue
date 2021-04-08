@@ -22,10 +22,13 @@
 </template>
 
 <script>
+const axios = require('axios')
+
 export default {
   name: 'UserLogin',
 
   data: () => ({
+    apiUrl: process.env.VUE_APP_ROOT_API,
     input: {
       username: "",
       password: ""
@@ -34,6 +37,13 @@ export default {
   methods: {
     login: function() {
       console.log(this.input.password)
+      axios.post(`${this.apiUrl}/auth/signin`,{
+        username: this.input.username,
+        password: this.input.password
+      })
+      .then(function(response) {
+        console.log(response)
+      })
     }
   }
 };
