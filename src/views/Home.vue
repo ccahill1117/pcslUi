@@ -21,5 +21,6 @@ export default {
   components: {
     'UserLogin': UserLogin
   }
+
 }
 </script>

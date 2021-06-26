@@ -7,13 +7,16 @@
       clearable>
     </v-text-field>
     <v-text-field
-      label="Password"
+      label="password"
       v-model="input.password"
-      clearable>
+      clearable
+      >
     </v-text-field>
     <p>down here we show these things</p>
-    <p>{{input.username}}</p>
-    <p>{{input.password}}</p>
+    <p>user {{input.username}}</p>
+    <p>pass{{input.password}}</p>
+    <p>token {{accessToken}}</p>
+
     <v-btn
       color=red
       v-on:click="login"
@@ -30,9 +33,10 @@ export default {
   data: () => ({
     apiUrl: process.env.VUE_APP_ROOT_API,
     input: {
-      username: "",
-      password: ""
-    }
+      username: "chris23",
+      password: "123456",
+    },
+    accessToken: ""
   }),
   methods: {
     login: function() {
@@ -41,8 +45,9 @@ export default {
         username: this.input.username,
         password: this.input.password
       })
-      .then(function(response) {
+      .then((response) => {
         console.log(response)
+        this.accessToken = response.data.accessToken
       })
     }
   }
