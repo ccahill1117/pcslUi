@@ -1,13 +1,15 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
     <h2>environment variable test {{apiUrl}}</h2>
+    <UserLogin></UserLogin>
   </div>
 </template>
 
 <script>
+
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+import UserLogin from '@/components/UserLogin.vue'
+
 
 export default {
   name: 'home',
@@ -17,7 +19,7 @@ export default {
     }
   },
   components: {
-
+    'UserLogin': UserLogin
   }
 }
 </script>
